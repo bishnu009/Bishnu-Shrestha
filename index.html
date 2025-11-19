@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bishnu shrestha — AI Mentor</title>
+  <style>
+    :root{
+      --accent:#6C63FF;
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --glass: rgba(255,255,255,0.03);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial; background: linear-gradient(180deg,#071021 0%, #07142a 60%); color:#e6eef6}
+    .container{max-width:1000px;margin:36px auto;padding:24px}
+
+    /* header */
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border:1px solid rgba(255,255,255,0.04); border-radius:16px;padding:22px;display:flex;gap:20px;align-items:center}
+    .avatar{width:128px;height:128px;border-radius:16px;flex-shrink:0;overflow:hidden;border:1px solid rgba(255,255,255,0.05);background:var(--glass);display:flex;align-items:center;justify-content:center}
+    .avatar img{width:100%;height:100%;object-fit:cover}
+    .hero h1{margin:0;font-size:24px}
+    .hero p.role{margin:6px 0 12px;color:var(--muted);font-weight:600}
+    .meta{display:flex;gap:12px;flex-wrap:wrap}
+    .meta .pill{background:rgba(255,255,255,0.03);padding:8px 12px;border-radius:999px;font-size:13px;border:1px solid rgba(255,255,255,0.02)}
+
+    /* grid */
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:18px;margin-top:18px}
+    .panel{background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);padding:18px;border-radius:12px}
+
+    /* achievements */
+    .achievements{display:flex;flex-direction:column;gap:12px}
+    .stats{display:flex;gap:12px;flex-wrap:wrap}
+    .stat{flex:1;min-width:140px;background:rgba(255,255,255,0.02);padding:12px;border-radius:10px;text-align:center}
+    .stat .num{font-size:20px;font-weight:700}
+    .stat .label{font-size:12px;color:var(--muted)}
+
+    /* core values */
+    .values{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .value{padding:8px 10px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);background:rgba(255,255,255,0.01);font-size:13px}
+
+    /* about */
+    .about p{color:var(--muted);line-height:1.55}
+
+    /* services */
+    .services h3{margin-top:0}
+    .cta{display:flex;gap:12px;align-items:center;margin-top:12px}
+    .btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06)}
+
+    /* contact */
+    .contact p{color:var(--muted);margin:8px 0}
+    footer{margin-top:22px;color:var(--muted);font-size:13px;text-align:center}
+
+    /* responsive */
+    @media (max-width:880px){
+      .grid{grid-template-columns:1fr}
+      .avatar{width:110px;height:110px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="avatar" aria-hidden>
+        <img src="image.jpg" alt="Profile picture of Bishnu shrestha" onerror="this.style.opacity=.4;this.alt='profile image missing'"/>
+      </div>
+      <div class="hero">
+        <h1>Bishnu shrestha</h1>
+        <p class="role">AI mentor • Gorkha, Nepal</p>
+        <div class="meta">
+          <div class="pill">Role: AI mentor</div>
+          <div class="pill">Address: Gorkha, Nepal</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div>
+        <div class="panel achievements">
+          <h2 style="margin-top:0">Achievements</h2>
+          <div class="stats">
+            <div class="stat">
+              <div class="num" data-target="299000">299K</div>
+              <div class="label">Subscribers</div>
+            </div>
+            <div class="stat">
+              <div class="num" data-target="26127">26,127+</div>
+              <div class="label">Community Members</div>
+            </div>
+            <div class="stat">
+              <div class="num" data-target="8">8+</div>
+              <div class="label">Years Teaching</div>
+            </div>
+          </div>
+
+          <div style="margin-top:12px">
+            <h3 style="margin:8px 0">Key Achievements</h3>
+            <ul style="margin:6px 0 0 18px;color:var(--muted)">
+              <li>Creator of Technology Channel — Nepal's leading tech-education platform</li>
+              <li>Creator of Learn AI App — #1 searched app on Google Play</li>
+              <li>Creator of Learn Computer Basic App (100K+ Downloads)</li>
+            </ul>
+
+            <h3 style="margin:12px 0 6px">Leadership & Recognition</h3>
+            <ul style="margin:6px 0 0 18px;color:var(--muted)">
+              <li>Host of Nepal's Top Tech Events like Build with AI and DevOps Kathmandu</li>
+              <li>Docker Captain, recognized technical expert by Docker Inc.</li>
+              <li>Consulted for 7+ US companies on AI integration & automation</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="panel about" style="margin-top:12px">
+          <h2>About me</h2>
+          <p>Bishworaj Poudel has enjoyed the last 7+ years empowering Nepali learners to turn technology into opportunity. His tutorials are the most watched tech content in Nepal, reaching 297K + subscribers, and his community of 26K+ collaborates on projects that land jobs and freelance gigs worldwide.</p>
+        </div>
+
+        <div class="panel services" style="margin-top:12px">
+          <h2>Services</h2>
+          <p>Transform your future with cutting-edge AI solutions — mentoring, course creation, curriculum design, and consulting for teams integrating AI.</p>
+          <div class="cta">
+            <a class="btn" href="mailto:bsnamjung@gmail.com">Contact: bsnamjung@gmail.com</a>
+            <a class="btn ghost" href="#about">Learn more</a>
+          </div>
+        </div>
+      </div>
+
+      <aside>
+        <div class="panel">
+          <h3>Core values</h3>
+          <div class="values">
+            <div class="value">Transparent</div>
+            <div class="value">Truth-Driven</div>
+            <div class="value">Collaborative</div>
+            <div class="value">Unpretentious</div>
+            <div class="value">Audacious</div>
+            <div class="value">Growth-Oriented</div>
+          </div>
+        </div>
+
+        <div class="panel" style="margin-top:12px">
+          <h3>Contact</h3>
+          <p>Email</p>
+          <p><a href="mailto:bsnamjung@gmail.com" style="color:var(--accent);text-decoration:none">bsnamjung@gmail.com</a></p>
+
+          <h3 style="margin-top:12px">Quick Info</h3>
+          <p style="color:var(--muted);margin:6px 0">Address: Gorkha, Nepal</p>
+          <p style="color:var(--muted);margin:6px 0">Role: AI mentor</p>
+        </div>
+
+        <div class="panel" style="margin-top:12px">
+          <h3>Short bio</h3>
+          <p style="color:var(--muted);margin:0">Creator of Learn AI App, host of Build with AI — focused on teaching practical AI and job-ready skills to Nepali learners.</p>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      © <span id="year"></span> Bishnu shrestha — Built with HTML, CSS & JS • Image: image.jpg
+    </footer>
+  </div>
+
+  <script>
+    // year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // animate numbers (simple)
+    function animateNumbers(){
+      const nums = document.querySelectorAll('.num');
+      nums.forEach(el => {
+        const target = Number(el.getAttribute('data-target')) || 0;
+        // if already has a pretty label, skip heavy animation
+        if(el.textContent.trim().match(/[a-zA-Z+]/)) return;
+        let cur = 0; const steps = 60; const inc = Math.max(1, Math.floor(target/steps));
+        const i = setInterval(()=>{
+          cur += inc; if(cur>=target){cur=target; clearInterval(i)};
+          el.textContent = cur.toLocaleString();
+        },12);
+      });
+    }
+    // run when visible
+    if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', animateNumbers);
+    else animateNumbers();
+  </script>
+</body>
+</html>
